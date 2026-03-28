@@ -1,0 +1,260 @@
+<!doctype html>
+
+<html class="light" lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>GlucoSync | Sincronizando</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#fbfdff",
+              "on-background": "#191c1e",
+              "on-error": "#ffffff",
+              tertiary: "#006481",
+              "primary-fixed-dim": "#adc7ff",
+              "on-surface": "#191c1e",
+              "on-primary-fixed": "#001a41",
+              "surface-dim": "#d8dadc",
+              "inverse-surface": "#2d3133",
+              "primary-fixed": "#d8e2ff",
+              error: "#ba1a1a",
+              "on-primary": "#ffffff",
+              "tertiary-fixed": "#bee9ff",
+              "on-tertiary-fixed": "#001f2a",
+              "on-secondary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "surface-bright": "#f7f9fb",
+              "primary-container": "#0070ea",
+              "surface-container-highest": "#e0e3e5",
+              "on-secondary-fixed-variant": "#00504a",
+              "on-secondary-container": "#006f67",
+              "on-primary-container": "#fefcff",
+              "surface-container": "#eceef0",
+              primary: "#0059bb",
+              background: "#f7f9fb",
+              "tertiary-container": "#197ea0",
+              "outline-variant": "#c1c6d7",
+              "surface-tint": "#005bc0",
+              "on-error-container": "#93000a",
+              "secondary-fixed": "#8ef4e9",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f2f4f6",
+              "secondary-container": "#8bf1e6",
+              "error-container": "#ffdad6",
+              "surface-variant": "#e0e3e5",
+              "secondary-fixed-dim": "#71d7cd",
+              surface: "#f7f9fb",
+              "inverse-on-surface": "#eff1f3",
+              "on-tertiary-fixed-variant": "#004d65",
+              "on-surface-variant": "#414754",
+              outline: "#717786",
+              "tertiary-fixed-dim": "#7ed1f7",
+              "inverse-primary": "#adc7ff",
+              "surface-container-high": "#e6e8ea",
+              "on-primary-fixed-variant": "#004493",
+              secondary: "#006a63",
+              "on-secondary-fixed": "#00201d",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .glass-morphism {
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      @keyframes pulse-ring {
+        0% {
+          transform: scale(0.8);
+          opacity: 0.5;
+        }
+        50% {
+          transform: scale(1.1);
+          opacity: 0.2;
+        }
+        100% {
+          transform: scale(0.8);
+          opacity: 0.5;
+        }
+      }
+
+      @keyframes float-organism {
+        0%,
+        100% {
+          transform: translateY(0) scale(1);
+        }
+        50% {
+          transform: translateY(-20px) scale(1.05);
+        }
+      }
+
+      .animate-pulse-slow {
+        animation: pulse-ring 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      .animate-float {
+        animation: float-organism 6s ease-in-out infinite;
+      }
+
+      .bg-mesh {
+        background-color: #f7f9fb;
+        background-image:
+          radial-gradient(
+            at 0% 0%,
+            rgba(0, 89, 187, 0.15) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 100% 100%,
+            rgba(142, 244, 233, 0.2) 0px,
+            transparent 50%
+          ),
+          radial-gradient(
+            at 50% 50%,
+            rgba(186, 26, 26, 0.02) 0px,
+            transparent 50%
+          );
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-mesh min-h-screen flex flex-col items-center justify-center overflow-hidden font-body text-on-background"
+  >
+    <!-- Brand Identity Header (Stealthy) -->
+    <header class="fixed top-12 flex flex-col items-center gap-2 opacity-60">
+      <span
+        class="font-headline font-bold text-2xl tracking-tighter text-primary"
+        >GlucoSync</span
+      >
+      <div class="h-1 w-8 bg-primary/20 rounded-full"></div>
+    </header>
+    <main
+      class="relative flex flex-col items-center justify-center w-full max-w-md px-8"
+    >
+      <!-- Organic Loading Visual -->
+      <div class="relative w-64 h-64 flex items-center justify-center mb-16">
+        <!-- Outer Pulsing Rings (Depth Layering) -->
+        <div
+          class="absolute inset-0 rounded-full bg-primary/5 animate-pulse-slow"
+        ></div>
+        <div
+          class="absolute inset-4 rounded-full bg-secondary/5 animate-pulse-slow"
+          style="animation-delay: 1s"
+        ></div>
+        <!-- Central Glass Sphere -->
+        <div
+          class="animate-float z-10 w-40 h-40 rounded-full glass-morphism flex items-center justify-center shadow-[0_20px_50px_rgba(0,89,187,0.12)]"
+        >
+          <!-- Inner "Liquid" Core -->
+          <div
+            class="relative w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center overflow-hidden"
+          >
+            <!-- Glassy highlight overlay -->
+            <div
+              class="absolute top-2 left-4 w-12 h-6 bg-white/40 rounded-[100%] rotate-[-25deg] blur-sm"
+            ></div>
+            <!-- Iconic Symbol -->
+            <span
+              class="material-symbols-outlined text-4xl text-primary/80"
+              data-weight="fill"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+            >
+              water_drop
+            </span>
+          </div>
+        </div>
+        <!-- Floating Satellite Orbs (Organismic Detail) -->
+        <div
+          class="absolute top-0 right-4 w-6 h-6 rounded-full glass-morphism animate-float"
+          style="animation-delay: 0.5s"
+        ></div>
+        <div
+          class="absolute bottom-10 left-0 w-4 h-4 rounded-full glass-morphism animate-float"
+          style="animation-delay: 2s"
+        ></div>
+        <div
+          class="absolute top-1/2 -left-8 w-3 h-3 rounded-full bg-primary/30 animate-pulse"
+        ></div>
+      </div>
+      <!-- Textual Feedback -->
+      <div class="text-center space-y-3 z-20">
+        <h1
+          class="font-headline text-xl font-semibold tracking-tight text-on-surface"
+        >
+          Sincronizando...
+        </h1>
+        <p class="font-label text-sm uppercase tracking-widest text-outline">
+          Analisando dados metabólicos
+        </p>
+      </div>
+      <!-- Subtle Navigation Anchor (Implicit Presence) -->
+      <div class="fixed bottom-12 flex items-center gap-6">
+        <div class="flex items-center gap-2">
+          <span
+            class="w-1.5 h-1.5 rounded-full bg-primary animate-bounce"
+          ></span>
+          <span
+            class="w-1.5 h-1.5 rounded-full bg-primary/30 animate-bounce"
+            style="animation-delay: 0.2s"
+          ></span>
+          <span
+            class="w-1.5 h-1.5 rounded-full bg-primary/10 animate-bounce"
+            style="animation-delay: 0.4s"
+          ></span>
+        </div>
+      </div>
+    </main>
+    <!-- Background Decorative Elements -->
+    <div
+      class="fixed -bottom-32 -left-32 w-96 h-96 rounded-full bg-primary/5 blur-[100px] pointer-events-none"
+    ></div>
+    <div
+      class="fixed -top-32 -right-32 w-96 h-96 rounded-full bg-secondary/10 blur-[100px] pointer-events-none"
+    ></div>
+    <!-- Background Image with data-alt -->
+    <div class="hidden">
+      <img
+        alt="Loading Background Texture"
+        data-alt="abstract soft gradient mesh with ethereal blue and teal tones, feeling like calm water or a clinical sanctuary atmosphere"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuABpjmErYaDkGZu9RWls5j5axnxgdxnXJQY4JddfoQWZ5UET9Ckt8sHoyMufOz4VaVppVpYchhXQJw8e5C88fz2dqr6qyZfHOIhnIO3ifiKOZ11FTDw2h59cfm6XVLFqn0LxGgx0MD3DxgDPaWw8mC1T3Ivt-4sNJwqpQFXzYm4zdIuhWEVMbLNNB2WBgaTmHxcGrzgGoxmULAv1onrXVpZjFpUPyEjouYqfiSojJSxaJ1gBt6DkyIHw4EhmF8XSJPa6gSrTgTVKpY"
+      />
+    </div>
+  </body>
+</html>
